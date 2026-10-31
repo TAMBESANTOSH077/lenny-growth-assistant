@@ -53,17 +53,3 @@ https://github.com/doncampbell/lennys-podcast-transcripts
 6. Use OpenAI mode on Community Cloud. Ollama is for the local evaluation demo.
 
 Streamlit's current deployment docs recommend a `requirements.txt` and keeping secrets out of Git. See the official docs linked above.
-
-## Demo script (2–3 minutes)
-
-1. Explain the user: Growth PM who wants actionable tactics without listening to 200+ hours.
-2. Ask a product/growth question and show transcript sources.
-3. Ask a follow-up to demonstrate context.
-4. Switch to Ship 30 for 30 and generate the structured essay.
-5. Show the Artifact Viewer.
-6. Explain the model trade-off: Ollama is private/zero API cost for local evaluation; cloud models provide stronger generation for the public demo.
-7. Explain the production path: FastAPI → PostgreSQL/pgvector → agent/router → React artifact viewer.
-
-## Security
-
-Generated HTML is treated as untrusted. The MVP strips `<script>` tags and renders the artifact through Streamlit's component boundary. The full assignment architecture should use DOMPurify plus an iframe with `sandbox="allow-scripts"` and no `allow-same-origin`, as specified in the brief.
