@@ -37,7 +37,6 @@ streamlit run app.py
 ```
 
 ## Add transcript data
-
 Place Markdown/TXT transcripts in `data/transcripts/`. The index automatically chunks them into ~550-word windows with overlap and uses TF-IDF cosine retrieval. This is a lightweight deployment-safe retrieval layer; the production architecture uses sentence-transformers + pgvector/HNSW.
 
 The public archive used by the assignment is:
